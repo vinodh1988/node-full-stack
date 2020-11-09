@@ -7,6 +7,32 @@
         <script src="js/bootstrap.min.js"></script>
    </head>
    <body>
-         <h1>Node Js is UP and running </h1>
+<form action="register" method="post">
+    <table style="margin: 30px" class="table-form">
+        <tr>
+            <th> Full Name </th>
+            <td> <input type="text" name="fname"> </td>
+        </tr>
+        <tr>
+            <th> Gender </th>
+            <td> 
+            <input type="radio" name="gender" value="male"> male 
+            <input type="radio" name="gender" value="female"> female
+            <input type="radio" name="gender" value="third gender"> third gender
+             </td>
+
+        </tr>
+
+         <tr>
+            <th> City </th>
+            <td> <input type="text" name="city"> </td>
+        </tr>
+        <tr>
+           <td colspan="2" align="center">
+              <button type="submit" class="btn btn-dark">Register</button>
+        </td>
+
+    </table>
+    </form>
    </body>
 </html>
