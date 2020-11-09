@@ -5,6 +5,8 @@
 
  app.use(express.static(path.join("public/styles"))); //configure static files path
  app.use(express.static(path.join("public/scripts")));
+ app.use(express.static(path.join("node_modules/bootstrap/dist")));
+ app.use(express.static(path.join("node_modules/jquery/dist")));
 
  app.get("/",function(request,response){
      console.log(request.headers);
