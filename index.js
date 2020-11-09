@@ -3,6 +3,9 @@
  const app = express();
  const path = require("path")
 
+ app.use(express.static(path.join("public/styles"))); //configure static files path
+ app.use(express.static(path.join("public/scripts")));
+
  app.get("/",function(request,response){
      console.log(request.headers);
      console.log(request.body)
