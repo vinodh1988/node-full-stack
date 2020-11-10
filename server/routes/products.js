@@ -25,10 +25,28 @@ route.post("/add",function(request,response){
         else
           {
           console.log(home_dir)
-          response.sendStatus(200).json({status: "Successfuly added"})
+          response.sendStatus(200);
           }
     })
 
+})
+
+route.post("/addmany",function(request,response){
+      let products = request.body;
+      for(let x of products)
+      {
+        productcrud.add(x,function(err){
+            if(err)
+              response.sendStatus(500);
+           
+        })
+    
+      }
+      response.sendStatus(200)
+})
+
+route.get("/images/:imagename",function(request,response){
+    response.sendFile("d:/productimages/"+request.params.imagename);
 })
 
 route.get("/report",function(request,response){

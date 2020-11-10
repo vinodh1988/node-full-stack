@@ -24,7 +24,7 @@ function createTable(){
       name TEXT,
       type TEXT,
       price DOUBLE,
-      destription TEXT,
+      description TEXT,
       qty TEXT,
       image TEXT)`
     return db.run(sql)
