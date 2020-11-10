@@ -1,0 +1,22 @@
+html
+    link(rel="stylesheet",href="../css/bootstrap.min.css")
+    script(src="../jquery.min.js")
+    script(src="../js/bootstrap.min.js")
+    head
+        title Users report
+    body
+        h3 Registered Users
+        div
+            table.table.table-hover
+                thead
+                    th Id
+                    th Name
+                    th Gender
+                    th City
+                tbody
+                    each x in users
+                        tr
+                            td= x.id
+                            td= x.name
+                            td= x.gender
+                            td= x.city

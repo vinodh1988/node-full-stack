@@ -13,3 +13,10 @@
 width: 300px;
 
 }
+
+iframe{
+  width: 1000px;
+  min-height: 600px;
+  overflow: hidden;
+  border :none;
+}

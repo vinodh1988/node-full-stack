@@ -12,6 +12,9 @@
  app.use(express.static(path.join("node_modules/bootstrap/dist")));
  app.use(express.static(path.join("node_modules/jquery/dist")));
 
+ app.set('views', path.join(__dirname, 'public/templates'));//setting the path of template files
+ app.set('view engine', 'pug'); //configuring view Engine
+
  app.use("/users",usersroute);
 
  app.get("/",function(request,response){
