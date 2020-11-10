@@ -4,7 +4,11 @@
  const path = require("path")
  const bodyParse = require("body-parser");
  const usersroute = require("./server/routes/users");
+ const productsroute = require("./server/routes/products");
+ const fileUpload = require('express-fileupload');
 
+ app.use(fileUpload());
+ app.use(bodyParse.json())
  app.use(bodyParse.urlencoded()); //parses incoming request
 
  app.use(express.static(path.join("public/styles"))); //configure static files path
@@ -16,6 +20,7 @@
  app.set('view engine', 'pug'); //configuring view Engine
 
  app.use("/users",usersroute);
+ app.use("/products",productsroute);
 
  app.get("/",function(request,response){
      console.log(request.headers);

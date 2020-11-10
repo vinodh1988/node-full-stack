@@ -19,11 +19,14 @@ function connect(){
 
 function createTable(){
     const sql = `
-    CREATE TABLE IF NOT EXISTS user (
+    CREATE TABLE IF NOT EXISTS products(
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT,
-      gender TEXT,
-      city TEXT)`
+      type TEXT,
+      price DOUBLE,
+      destription TEXT,
+      qty TEXT,
+      image TEXT)`
     return db.run(sql)
 }
 

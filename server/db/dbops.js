@@ -15,4 +15,21 @@ const crud = {
     }
 }
 
-module.exports = crud;
+
+const productcrud = {
+    read: function(callback){
+      const sql = "select * from products"
+      db.all(sql,[],callback);
+    },
+
+    add : function(product,callback){
+        const sql = "insert into products(name,type,qty,price,description,image) values(?,?,?,?,?,?)";
+
+        db.run(sql,
+        [product.name,product.type,product.qty,product.price,product.description,product.image],
+        callback);
+    }
+}
+
+
+module.exports = {crud: crud,productcrud: productcrud};
